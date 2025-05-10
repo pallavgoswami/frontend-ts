@@ -1,23 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import Reducer1 from "./reducerhook.js";
+import ControlledForm from "./controlledformvalidation.js";
+import InputForm from "./Tasks/inputValidation.js";
+import "./App.css";
+import UncontrolledForm from "./uncontrolledcomponent.js";
+import ControlledFormMultipleInput from "./controlledformmultipleinput.js";
+import KeyboardEvent from "./keyboardevent.js";
+import MouseEvent from "./mouseevent.js";
+import OnSubmit from "./onsubmit.js";
+import OnChange from "./onchange.js";
+import OnClick from "./onclick.js";
+import TodoApp from "./todo.js";
+import ToDoMul from "./ToDoMultipleComponents/main.js";
+import ThemeToggler from "./ThemeContext/themetoggler.js";
+import ThemeApp from "./ThemeContext/main.js";
+import ToggleText from "./Tasks/toggletext.js";
+import Refdemo2 from "./useref2.js";
+import Mem from "./usememo.js";
+import Refdemo1 from "./useref1.js";
+import Refdemo from "./useref.js";
+import Callbackdemo from "./usecallback.js";
+import UserList from "./axiosapi.js";
+import UserListFetch from "./fetchapi.js";
+import UserListFetch1 from "./fetchapi1.js";
+import BackgroundColorChanger from "./Tasks/backgroundcolorchanger.js";
+import SearchFilter from "./Tasks/searchfilter.js";
+import CharacterCounter from "./Tasks/charactercounter.js";
+import DynamicRouting from "./DynamicRouting/App.js";
+import NestedRouting from "./NestedRouting/App.js";
+import SwitchRouting from "./SwitchRouting/App.js";
+import NavlinkActiveStyling from "./NavlinkActiveStyling/App.js";
+import Redux from "./Redux/App.js";
+import UseEffect1 from "./useeffect1.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <UseEffect1/> */}
+      {/* <Callbackdemo/> */}
+      {/* <Mem/> */}
+      {/* <Refdemo/> */}
+      {/* <Refdemo1/> */}
+      {/* <Refdemo2/> */}
+      {/* <Reducer1/> */}
+      {/* <ThemeApp/> */}
+      {/* <TodoApp/> */}
+      {/* <ToDoMul/> */}
+      {/* <OnClick/> */}
+      {/* <OnChange/> */}
+      {/* <OnSubmit/> */}
+      {/* <MouseEvent/> */}
+      {/* <KeyboardEvent/> */}
+      {/* <ControlledForm/> */}
+      {/* <ControlledFormMultipleInput/> */}
+      {/* <ControlledFormValidation/> */}
+      {/* <InputForm/> */}
+      {/* <UncontrolledForm/> */}
+      {/* <DynamicRouting /> */}
+      {/* <NestedRouting/> */}
+      {/* <SwitchRouting/>   // wont work due to switch being used and react router dom version mismatch */}
+      {/* <NavlinkActiveStyling/>   // wont work due to switch being used and react router dom version mismatch */}
+      {/* <UserList/> */}
+      {/* <UserListFetch/> */}
+      {/* <UserListFetch1/> */}
+      {/* <Redux/> */}
+
+      {/* TASKS BELOW */}
+      {/* <InputForm/> */}
+      {/* <ToggleText/> */}
+      {/* <CharacterCounter/> */}
+      {/* <BackgroundColorChanger/> */}
+      {/* <SearchFilter/> */}
     </div>
   );
 }

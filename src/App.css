@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.active-link {
+  font-weight: bold;
+  color: blue;
+  text-decoration: underline;
+}

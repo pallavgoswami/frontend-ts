@@ -1,0 +1,220 @@
+React.js Notes
+==============
+
+What is React?
+--------------
+- React.js is a JavaScript library used to build UI or web applications.
+- It is used to build Single Page Applications (SPA).
+- It allows us to create reusable components.
+- React uses a Virtual DOM which updates only changed elements to improve performance.
+- React uses one-way data binding.
+- Originally developed by Facebook, maintained by Meta and a large open-source community.
+
+Key Features of React.js
+------------------------
+- Component-based architecture
+- Virtual DOM
+- One-way data binding
+- Single Page Application (SPA)
+- Open-source
+- Dynamic loading
+- JSX (JavaScript XML) — Allows writing HTML-like syntax in JavaScript
+
+Environment Setup
+-----------------
+- Requires Node.js and NPM installed.
+- Check Node version: node -v
+
+Project Structure
+-----------------
+public/         - Contains static files like index.html
+node_modules/   - Contains installed libraries
+src/            - Contains main React components
+package.json    - Lists dependencies and scripts
+
+Components in React
+-------------------
+1. Class Component (older way):
+   - Created by extending React.Component
+   - Useful to understand React's history
+   - Has lifecycle methods like componentDidMount(), render(), etc.
+
+2. Functional Component (preferred):
+   - Simpler syntax using functions
+   - Uses Hooks for state and side effects
+
+Note: Component names must start with a capital letter. Props and data can be passed to components.
+
+Props
+-----
+- Props are used to pass data from parent to child components.
+- They are read-only (immutable).
+
+State
+-----
+- State is a built-in object that stores property values that belong to the component.
+- State is mutable and managed within the component.
+
+React Hooks
+-----------
+Hooks allow functional components to use state and lifecycle features.
+
+1. useState:
+   - Syntax: const [state, setState] = useState(initialValue);
+   - Used to add state to functional components.
+
+2. useEffect:
+   - Allows performing side effects (data fetching, DOM manipulation).
+   - Syntax: useEffect(() => { ... }, [dependencies]);
+
+3. useMemo:
+   - Caches the result of a computation.
+   - Syntax: const memoizedValue = useMemo(() => computeValue(a, b), [a, b]);
+
+4. useCallback:
+   - Caches a function reference.
+   - Syntax: const memoizedFn = useCallback(() => { ... }, [dependencies]);
+
+   Difference:
+   - useMemo caches a returned value.
+   - useCallback caches a function definition.
+
+5. useRef:
+   - Stores a mutable value that does not cause re-renders.
+   - Often used to directly access a DOM element.
+   - Syntax: const ref = useRef(initialValue);
+
+   Difference from useState:
+   - useRef does NOT trigger re-render.
+   - useState causes component to re-render on change.
+
+6. useReducer:
+   - Ideal for complex state logic.
+   - Syntax:
+     const [state, dispatch] = useReducer(reducerFn, initialState);
+     reducerFn = (state, action) => { return newState }
+
+   - Used when new state depends on the previous state.
+   - Common in Redux-style architecture.
+
+Prop Drilling
+-------------
+- Passing props through many levels of components.
+- Can become difficult to maintain in large apps.
+
+useContext
+----------
+- Solves prop drilling problem.
+- Provides global state accessible by any component.
+- Syntax:
+  const MyContext = React.createContext();
+  const value = useContext(MyContext);
+
+Local Storage in React
+----------------------
+- JSON.parse(): Parse data from local storage (string to object).
+- JSON.stringify(): Convert data to JSON format before storing.
+
+Arrow Functions
+---------------
+- Shorter syntax for functions.
+  Traditional:
+    function add(a, b) { return a + b; }
+  Arrow:
+    const add = (a, b) => a + b;
+
+Text Styling
+------------
+- textDecoration: 'line-through' can be used for strikethrough text.
+
+Event Handling
+--------------
+React events are similar to DOM events but use camelCase syntax.
+
+Common Events:
+- onClick
+- onChange
+- onSubmit
+- onMouseEnter
+- onMouseLeave
+- onKeyPress / onKeyDown / onKeyUp
+
+Template Literals
+-----------------
+- Used to combine values and strings using backticks.
+  Example: `Hello ${name}`
+
+Forms in React
+--------------
+1. Controlled Components:
+   - Form inputs bound to component state.
+   - React controls the input values.
+   - Enables validation, dynamic form logic, and predictable state.
+
+2. Uncontrolled Components:
+   - Form inputs not controlled by React.
+   - DOM handles the input values.
+   - Use `ref` to access input values.
+
+When to Use:
+- Use controlled components for complex forms.
+- Use uncontrolled components for simple forms or when integrating with third-party libraries.
+
+Routing in React
+----------------
+React Router is used to handle navigation in Single Page Applications.
+
+Types:
+- BrowserRouter: Uses HTML5 history API.
+- HashRouter: Uses URL hash, useful for static hosting like GitHub Pages.
+
+Routing Concepts:
+- Route: Maps path to component.
+- useParams(): Hook to access route parameters.
+- Outlet: Used for rendering nested routes.
+- Redirect: Used in older versions (v5) for navigation.
+
+Switch:
+- Ensures only the first matching Route renders.
+
+Dynamic Routing:
+- Allows using parameters in paths like `/product/:id`.
+
+Redux (State Management)
+------------------------
+Redux is a predictable state container for React apps.
+
+Main Concepts:
+1. Store:
+   - Holds the global application state.
+   - Only one store per app.
+
+2. Actions:
+   - Plain JS objects describing "what happened".
+   - Example: { type: "INCREMENT" }
+
+3. Reducers:
+   - Pure functions to update the state.
+   - Accepts current state and action; returns new state.
+
+Redux Flow:
+Component -> dispatch(action) -> reducer(state, action) -> new state -> Component
+
+Setup:
+- npm install redux react-redux
+
+Backend Integration
+-------------------
+- Changes in frontend should be reflected in the backend and vice versa.
+- Use APIs (fetch / axios) to communicate with the backend.
+
+Example Components for Online Shopping App
+------------------------------------------
+1. Product Component
+   - Displays product details.
+
+2. Add to Cart Component
+   - Adds items to cart, updates quantity.
+
+3. Payment Component
+   - Handles payment gateway and checkout logic.
