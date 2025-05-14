@@ -31,10 +31,20 @@ import SwitchRouting from "./SwitchRouting/App.js";
 import NavlinkActiveStyling from "./NavlinkActiveStyling/App.js";
 import Redux from "./Redux/App.js";
 import UseEffect1 from "./useeffect1.js";
+import ClassComponent from "./classcomponent.js";
+import StateDemo from "./usestate.js";
+import ClassCompState from "./classcompstate.js";
+import PropsDemo from "./propsdemo.js";
+import ParentComponent from "./parentcomponent.js";
 
 function App() {
   return (
     <div className="App">
+      {/* <ClassComponent/> */}
+      {/* <ClassCompState/> */}
+      {/* <PropsDemo/> */}
+      <ParentComponent/>
+      {/* <StateDemo/> */}
       {/* <UseEffect1/> */}
       {/* <Callbackdemo/> */}
       {/* <Mem/> */}

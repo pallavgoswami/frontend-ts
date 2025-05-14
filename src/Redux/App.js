@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { increment, decrement, incr_by_amount } from "./Redux/actions";
+import { increment, decrement, incr_by_amount } from "./actions";
 
 function Redux() {
   const count = useSelector((state) => state.value);
