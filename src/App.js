@@ -36,6 +36,7 @@ import StateDemo from "./usestate.js";
 import ClassCompState from "./classcompstate.js";
 import PropsDemo from "./propsdemo.js";
 import ParentComponent from "./parentcomponent.js";
+import ToDoTask from "./Tasks/todotask.js";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
       {/* <ClassComponent/> */}
       {/* <ClassCompState/> */}
       {/* <PropsDemo/> */}
-      <ParentComponent/>
+      {/* <ParentComponent/> */}
       {/* <StateDemo/> */}
       {/* <UseEffect1/> */}
       {/* <Callbackdemo/> */}
@@ -80,6 +81,7 @@ function App() {
       {/* <CharacterCounter/> */}
       {/* <BackgroundColorChanger/> */}
       {/* <SearchFilter/> */}
+      <ToDoTask/>
     </div>
   );
 }
