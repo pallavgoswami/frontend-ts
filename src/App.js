@@ -37,6 +37,12 @@ import ClassCompState from "./classcompstate.js";
 import PropsDemo from "./propsdemo.js";
 import ParentComponent from "./parentcomponent.js";
 import ToDoTask from "./Tasks/todotask.js";
+import DragDropList from "./Tasks/dragdroplist.js";
+import SimpleCalculator from "./Tasks/simplecalculator.js";
+import CycleColors from "./Tasks/cyclecolors.js";
+import RandomQuote from "./Tasks/randomquote.js";
+import FileUploader from "./Tasks/fileuploader.js";
+import SearchBar from "./Tasks/searchbar.js";
 
 function App() {
   return (
@@ -81,7 +87,13 @@ function App() {
       {/* <CharacterCounter/> */}
       {/* <BackgroundColorChanger/> */}
       {/* <SearchFilter/> */}
-      <ToDoTask/>
+      {/* <ToDoTask/> */}
+      {/* <DragDropList/> */}
+      {/* <SimpleCalculator/> */}
+      {/* <CycleColors/> */}
+      {/* <RandomQuote/> */}
+      {/* <FileUploader/> */}
+      {/* <SearchBar/> */}
     </div>
   );
 }
